@@ -6,7 +6,7 @@ def rgbToHls(image: Image):
     hlsImg = [[0]*(image.width) for _ in range(0, image.height)]
     for x in range(0, image.height):
         for y in range(0, image.width):
-            pixelData = image.getpixel((x,y)) / 255
+            pixelData = image.getpixel((x,y))
             hlsImg[x][y] = cs.rgb_to_hls(
                             pixelData[0],
                             pixelData[1],

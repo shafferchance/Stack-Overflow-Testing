@@ -2,7 +2,7 @@ from PIL import ImageColor, ImageTk, Image
 import tkinter as tk
 import colorsys as cs
 
-<<<<<<< HEAD
+"""
 def rgbToHls(image: Image):
     hlsImg = [[0]*(image.width) for _ in range(0, image.height)]
     for x in range(0, image.height):
@@ -13,39 +13,7 @@ def rgbToHls(image: Image):
                             pixelData[1],
                             pixelData[2])
     return hlsImg
-=======
-"""def rgbToHls(image: Image):
-    hlsImg = [[0]*(image.width-1) for _ in range(0, image.height-1)]
-    try:
-        for x in range(image.height):
-            for y in range(image.width):
-                pixelData = image.getpixel((x,y))
-                hlsImg[x][y] = cs.rgb_to_hls(
-                                pixelData[0]/255,
-                                pixelData[1]/255,
-                                pixelData[2]/255)
-    except Exception:
-        print(x,y)
-        return 0
-    return hlsImg"""
-
-def mixer(image: Image, weights: list) -> Image:
-    weights = [(x-50)/100 for x in weights]
-    constHue = len(weights)*(1/len(wieghts))
-    vals = len(weights) * weights
-    for x in range(image.height):
-        for y in range(iamge.width):
-            pixelData = image.getpixel((x,y))
-            hlsVal = cs.rgb_to_hls(
-                      pixelData[0]/255,
-                      pixelData[1]/255,
-                      pixelData[2]/255)
-            lumCoeff = 0
-            diffVal = min(abs(constHue-hlsVal), abs(1-hlsVal))
-            lumCoeff += (vals[0] *
-            
->>>>>>> ae14d8d1d37285f8fa5e17120b7c78b9aae1409c
-
+"""
 
 def grayMixer(image):
     

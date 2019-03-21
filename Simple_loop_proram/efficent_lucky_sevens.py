@@ -52,8 +52,14 @@ def main():
         print(outputString.format(numRolls, output[0], output[1]))
     
     print("Sorry you're out of money")
-    
 
 # Entry point for a Python program
 if __name__ == "__main__":
     main()
+    while True:
+        userIn = input("Would you like to play again?")
+        if 'yes' == userIn:
+            main()
+        else:
+            print("Goodbye")
+            break
